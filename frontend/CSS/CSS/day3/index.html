@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Colors and Backgrounds</title>
+<style>
+    /* 1. Text Colors */
+    .named-color {
+        color: red; /* Named color */
+    }
+
+    .hex-color {
+        color: #3498db; /* HEX color */
+    }
+
+    .rgb-color {
+        color: rgb(52, 152, 219); /* RGB color */
+    }
+
+    .hsl-color {
+        color: hsl(204, 70%, 53%); /* HSL color */
+    }
+
+    /* 2. Backgrounds */
+    .bg-color {
+        background-color: lightblue;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+    }
+
+    .bg-image {
+        background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=800&q=80');
+        background-size: cover; /* cover entire div */
+        background-repeat: no-repeat;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+        text-shadow: 1px 1px 2px black;
+        margin: 10px 0;
+        border-radius: 10px;
+    }
+
+    .bg-repeat {
+        background-image: url('https://www.w3schools.com/css/img_tree.png');
+        background-repeat: repeat;
+        padding: 50px;
+        text-align: center;
+        color: darkgreen;
+        font-weight: bold;
+        border-radius: 10px;
+        margin: 10px 0;
+    }
+</style>
+</head>
+<body>
+
+<h1>CSS Colors and Backgrounds Demo</h1>
+
+<h2 class="named-color">This text uses a Named Color (Red)</h2>
+<h2 class="hex-color">This text uses a HEX Color (#3498db)</h2>
+<h2 class="rgb-color">This text uses an RGB Color (rgb(52,152,219))</h2>
+<h2 class="hsl-color">This text uses an HSL Color (hsl(204,70%,53%))</h2>
+
+<div class="bg-color">
+    This div has a background color (lightblue).
+</div>
+
+<div class="bg-image">
+    Background Image (Cover, No Repeat)
+</div>
+
+<div class="bg-repeat">
+    Background Image Repeated
+</div>
+
+</body>
+</html>

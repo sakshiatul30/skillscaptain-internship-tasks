@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example Page</title>
+
+    <!-- Internal CSS -->
+    <style>
+        h1 {
+            color: blue;           /* Internal CSS */
+            text-align: center;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .internal-box {
+            border: 2px solid #0000ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background-color: #add8e6;
+        }
+    </style>
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Inline CSS -->
+    <h1 style="color: red; font-size: 36px;">Welcome to My CSS Demo</h1>
+
+    <!-- Internal CSS Box -->
+    <div class="internal-box">
+        <h2>Internal CSS Example</h2>
+        <p>This box is styled using internal CSS defined in the &lt;style&gt; tag in the &lt;head&gt; section.</p>
+    </div>
+
+    <!-- External CSS Box -->
+    <div class="external-box">
+        <h2>External CSS Example</h2>
+        <p>This box is styled using external CSS from <code>styles.css</code>.</p>
+    </div>
+
+    <!-- Inline CSS Paragraph -->
+    <p style="color: purple; font-weight: bold;">This paragraph uses inline CSS applied directly to the element.</p>
+
+</body>
+</html>

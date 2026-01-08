@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Transitions & Animations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        /* 🔹 Transition Example */
+        .btn {
+            padding: 14px 30px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #2ecc71;
+            transform: scale(1.1);
+        }
+
+        /* 🔹 Animation using keyframes */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .box {
+            width: 200px;
+            height: 120px;
+            background-color: #9b59b6;
+            color: white;
+            margin: 40px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            animation: slideIn 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Transitions & Animations</h1>
+
+    <button class="btn">Hover Me</button>
+
+    <div class="box">
+        Animated Box
+    </div>
+
+</body>
+</html>

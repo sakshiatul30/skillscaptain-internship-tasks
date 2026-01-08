@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Essentials Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f7;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Flex container */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 2px solid #ddd;
+        }
+
+        /* Flex items */
+        .item {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 6px;
+
+            /* Flex item properties */
+            flex: 1 1 150px;
+        }
+
+        /* Different size example */
+        .item.large {
+            flex-grow: 2;
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS Flexbox Essentials</h1>
+
+<div class="container">
+    <div class="item">Item 1</div>
+    <div class="item large">Item 2 (Grow)</div>
+    <div class="item">Item 3</div>
+</div>
+
+</body>
+</html>

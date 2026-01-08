@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selectors Demo</title>
+<style>
+    /* 1. Element Selector */
+    p {
+        color: blue;
+        font-size: 16px;
+    }
+
+    /* 2. Class Selector */
+    .button {
+        background-color: teal;
+        color: white;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    /* 3. ID Selector */
+    #header {
+        text-align: center;
+        font-family: 'Verdana', sans-serif;
+        color: darkred;
+    }
+
+    /* 4. Attribute Selector */
+    input[type="text"] {
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    /* 5. Pseudo-classes */
+    a:hover {
+        color: red;
+        text-decoration: underline;
+    }
+
+    button:hover {
+        background-color: darkcyan;
+    }
+
+    li:nth-child(odd) {
+        background-color: #f0f0f0;
+    }
+</style>
+</head>
+<body>
+
+<!-- ID Selector -->
+<h1 id="header">CSS Selectors Example</h1>
+
+<!-- Element Selector -->
+<p>This paragraph is styled using an element selector.</p>
+<p>All &lt;p&gt; tags get blue color and 16px font size.</p>
+
+<!-- Class Selector -->
+<button class="button">Click Me</button>
+<button class="button">Another Button</button>
+
+<!-- Attribute Selector -->
+<div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+</div>
+
+<!-- Pseudo-classes and nth-child -->
+<ul>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+    <li>Fourth item</li>
+</ul>
+
+<!-- Pseudo-class hover for links -->
+<p>Visit <a href="https://www.example.com" target="_blank">Example.com</a> to learn more.</p>
+
+</body>
+</html>

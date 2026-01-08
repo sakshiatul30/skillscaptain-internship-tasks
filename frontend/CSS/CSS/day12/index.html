@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo Classes and Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Pseudo-class :hover */
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ddd;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        /* Pseudo-class :nth-child */
+        ul {
+            width: 200px;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            padding: 8px;
+        }
+
+        li:nth-child(odd) {
+            background-color: #e0e0e0;
+        }
+
+        /* Pseudo-class :focus */
+        input {
+            padding: 8px;
+            width: 200px;
+            margin-top: 15px;
+        }
+
+        input:focus {
+            outline: none;
+            border: 2px solid green;
+        }
+
+        /* Pseudo-class :not */
+        p {
+            margin-top: 15px;
+        }
+
+        p:not(.highlight) {
+            color: gray;
+        }
+
+        .highlight {
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Pseudo-element ::before */
+        h2::before {
+            content: "👉 ";
+            color: orange;
+        }
+
+        /* Pseudo-element ::after */
+        a::after {
+            content: " 🔗";
+        }
+    </style>
+</head>
+<body>
+
+<h1>Pseudo-classes & Pseudo-elements Demo</h1>
+
+<button>Hover Me</button>
+
+<ul>
+    <li>Item One</li>
+    <li>Item Two</li>
+    <li>Item Three</li>
+    <li>Item Four</li>
+</ul>
+
+<input type="text" placeholder="Focus on me">
+
+<p>This paragraph is normal.</p>
+<p class="highlight">This paragraph is highlighted.</p>
+
+<h2>Useful Links</h2>
+<a href="#">Visit Website</a>
+
+</body>
+</html>

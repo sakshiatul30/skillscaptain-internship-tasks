@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Float and Clear Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Container with clearfix */
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 2px solid #ddd;
+            margin-bottom: 30px;
+        }
+
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Floated image */
+        .card-img {
+            float: left;
+            width: 120px;
+            height: 120px;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Clear example */
+        .box {
+            width: 150px;
+            height: 100px;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .left {
+            float: left;
+            background-color: #e67e22;
+        }
+
+        .right {
+            float: right;
+            background-color: #9b59b6;
+        }
+
+        .clear-box {
+            clear: both;
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS Float and Clear</h1>
+
+<!-- Float with text wrapping -->
+<div class="container">
+    <div class="card-img">Image</div>
+    <div class="card-text">
+        This example shows how the <strong>float</strong> property allows text to wrap
+        around an element. The blue box is floated to the left, and the text flows
+        beside it. The container uses a <strong>clearfix</strong> to prevent collapsing.
+    </div>
+</div>
+
+<!-- Float and clear example -->
+<div class="container">
+    <div class="box left">Float Left</div>
+    <div class="box right">Float Right</div>
+    <div class="box clear-box">Cleared Box</div>
+</div>
+
+</body>
+</html>

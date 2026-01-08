@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Box Model Demo</title>
+<style>
+    /* Apply border-box to all elements for predictable sizing */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    h1 {
+        color: #3498db;
+        text-align: center;
+    }
+
+    .box {
+        width: 300px;          /* Content width */
+        height: 150px;         /* Content height */
+        padding: 20px;         /* Space inside border */
+        border: 5px solid #e74c3c;  /* Border around padding and content */
+        margin: 20px auto;     /* Space outside border and center horizontally */
+        background-color: #f1c40f;
+        text-align: center;
+        line-height: 110px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .content-box-example {
+        width: 300px;
+        height: 150px;
+        padding: 20px;
+        border: 5px solid #2ecc71;
+        margin: 20px auto;
+        background-color: #1abc9c;
+        box-sizing: content-box; /* Default behavior */
+        text-align: center;
+        line-height: 110px;
+        font-weight: bold;
+        color: white;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+
+<h1>CSS Box Model Demo</h1>
+
+<div class="box">
+  Border-Box Example
+</div>
+
+<p>This box uses <strong>box-sizing: border-box;</strong>, so the total width includes content, padding, and border.</p>
+
+<div class="content-box-example">
+  Content-Box Example
+</div>
+
+<p>This box uses <strong>box-sizing: content-box;</strong> (default). Padding and border are added outside the content width/height, making it larger overall.</p>
+
+</body>
+</html>
