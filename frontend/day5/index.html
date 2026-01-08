@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML Images – Assignment Starter</title>
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: white;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.06);
+        padding: 25px;
+        border-radius: 12px;
+        width: 75%;
+        margin: auto;
+        box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+        color: #E5608E;
+        margin-bottom: 10px;
+    }
+
+    .preview-area {
+        margin-top: 30px;
+        min-height: 200px;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px dashed #E5608E;
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    button {
+        margin-top: 20px;
+        background: #E5608E;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.3s ease;
+    }
+
+    button:hover {
+        background: #ff8ca8;
+    }
+
+    img {
+        border-radius: 8px;
+    }
+
+    .images-row {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Adding Images in HTML</h1>
+    <p>Complete the tasks given in your assignment by editing the HTML.</p>
+
+    <!-- Preview Area -->
+    <div class="preview-area" id="output">
+        <p style="opacity: 0.7;">Your added images will appear here…</p>
+    </div>
+
+    <button onclick="loadImages()">Refresh Preview</button>
+</div>
+
+<script>
+    function loadImages() {
+        document.getElementById("output").innerHTML =
+            document.getElementById("studentArea")?.innerHTML ||
+            "<p style='opacity:0.7;'>No images added yet.</p>";
+    }
+</script>
+
+<!-- Student Area: Add your images here -->
+<div id="studentArea" style="display:none;">
+
+    <!-- 1. Single Image -->
+    <img src="https://via.placeholder.com/250" alt="My First Image" width="250px">
+
+    <!-- 2. Two Images Side-by-Side -->
+    <div class="images-row">
+        <img src="https://via.placeholder.com/200" alt="Image One" width="200px">
+        <img src="https://via.placeholder.com/200" alt="Image Two" width="200px">
+    </div>
+
+    <!-- 3. Clickable Image -->
+    <a href="https://example.com" target="_blank" style="display: inline-block; margin-top: 20px;">
+        <img src="https://via.placeholder.com/200" alt="Clickable Image" width="200px">
+    </a>
+
+</div>
+
+</body>
+</html>

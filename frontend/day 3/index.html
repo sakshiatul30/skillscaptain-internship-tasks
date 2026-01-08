@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Checklist</title>
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
+            min-height: 100vh;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 750px;
+            background: #ffffffcc;
+            backdrop-filter: blur(12px);
+            border-radius: 14px;
+            padding: 35px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            letter-spacing: -0.5px;
+        }
+
+        .section {
+            margin-bottom: 32px;
+            padding: 20px 22px;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e2e2;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+        .section h2 {
+            margin-bottom: 12px;
+            font-size: 22px;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section h2::before {
+            content: "✦";
+            color: #7b5cff;
+            font-size: 20px;
+        }
+
+        ul, ol, dl {
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+
+        li {
+            padding: 4px 0;
+        }
+
+        dt {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        dd {
+            margin-left: 15px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Travel Packing Checklist</h1>
+
+        <div class="section essentials">
+            <h2>Packing Essentials</h2>
+            <ul>
+                <li>Clothes</li>
+                <li>Toothbrush</li>
+                <li>Sunscreen</li>
+                <li>Passport</li>
+                <li>Shoes</li>
+            </ul>
+        </div>
+
+        <div class="section trip-steps">
+            <h2>Trip Preparation Steps</h2>
+            <ol>
+                <li>Book tickets</li>
+                <li>Pack bags</li>
+                <li>Check weather</li>
+                <li>Arrange transportation</li>
+            </ol>
+        </div>
+
+        <div class="section nested">
+            <h2>Electronics (Nested List)</h2>
+            <ul>
+                <li>Mobile</li>
+                <li>Laptop
+                    <ul>
+                        <li>Charger</li>
+                        <li>Mouse</li>
+                    </ul>
+                </li>
+                <li>Headphones</li>
+            </ul>
+        </div>
+
+        <div class="section notes">
+            <h2>Important Notes</h2>
+            <dl>
+                <dt>Passport</dt>
+                <dd>Must be valid for 6 months.</dd>
+                <dt>Visa</dt>
+                <dd>Check if required for the destination.</dd>
+                <dt>Travel Insurance</dt>
+                <dd>Recommended for all international trips.</dd>
+            </dl>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms – Assignment</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #E5608E;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 12px;
+            width: 70%;
+            margin: auto;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background: #E5608E;
+            color: white;
+            cursor: pointer;
+            width: auto;
+            padding: 10px 20px;
+            margin-top: 15px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin: 0 5px 0 10px;
+        }
+
+        label {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Contact Form</h1>
+
+<form>
+    <!-- Name -->
+    <input type="text" placeholder="Enter your name" required><br>
+
+    <!-- Email -->
+    <input type="email" placeholder="Enter your email" required><br>
+
+    <!-- Phone Number -->
+    <input type="tel" placeholder="Enter your phone number" required><br>
+
+    <!-- Preferred Contact Method -->
+    <div>
+        <p>Select preferred contact method:</p>
+        <label><input type="radio" name="contact" required> Email</label>
+        <label><input type="radio" name="contact"> Phone</label>
+    </div>
+
+    <!-- Message -->
+    <textarea placeholder="Enter your message" rows="4" required></textarea><br>
+
+    <!-- Terms Checkbox -->
+    <label><input type="checkbox" required> I agree to the terms</label><br>
+
+    <!-- Date Picker -->
+    <input type="date" required><br>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

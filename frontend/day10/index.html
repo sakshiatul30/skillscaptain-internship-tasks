@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semantic HTML Example</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    header, nav, main, section, article, aside, footer {
+        display: block;
+    }
+
+    header {
+        background-color: #E5608E;
+        padding: 20px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    nav {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section {
+        background: rgba(255,255,255,0.08);
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    article {
+        background: rgba(255,255,255,0.05);
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+
+    aside {
+        background: rgba(255,255,255,0.06);
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 8px;
+    }
+
+    footer {
+        background-color: #222;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        color: #ccc;
+    }
+
+    footer a {
+        color: #E5608E;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    My Semantic Webpage
+</header>
+
+<nav>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+    <!-- Task 1: Main Section containing existing content -->
+    <section>
+        <h2>Welcome Section</h2>
+        <p>This is the main content area of the webpage.</p>
+    </section>
+
+    <!-- Task 2: Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <!-- Task 3: Article inside Services -->
+        <article>
+            <h3>Web Development</h3>
+            <p>We offer full-stack web development services, creating responsive and modern websites tailored to your business needs.</p>
+        </article>
+    </section>
+
+    <!-- Task 2: Portfolio Section -->
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Check out some of our recent projects and case studies.</p>
+    </section>
+
+    <!-- Task 4: Aside Section -->
+    <aside>
+        <h3>Note:</h3>
+        <p>Always keep your semantic HTML organized for better accessibility and SEO!</p>
+    </aside>
+</main>
+
+<!-- Task 5: Footer -->
+<footer>
+    <p>Contact: <a href="mailto:example@example.com">example@example.com</a></p>
+    <p>Follow us: 
+        <a href="#">Facebook</a> | 
+        <a href="#">Twitter</a> | 
+        <a href="#">Instagram</a>
+    </p>
+    <p>&copy; 2026 Semantic Webpage. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

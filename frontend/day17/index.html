@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards Example</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            flex: 1 1 300px; /* Flexible width */
+            max-width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h2>Card One</h2>
+            <p>This is some content for card one. It will adjust on smaller screens.</p>
+        </div>
+        <div class="card">
+            <h2>Card Two</h2>
+            <p>This is some content for card two. Notice how it adapts on mobile devices.</p>
+        </div>
+        <div class="card">
+            <h2>Card Three</h2>
+            <p>This is some content for card three. Flexible layout makes it responsive.</p>
+        </div>
+    </div>
+
+</body>
+</html>

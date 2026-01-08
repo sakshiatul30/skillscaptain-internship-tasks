@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure Money Transfer</title>
+</head>
+<body>
+
+    <h2>Acme Bank – Secure Transfer</h2>
+
+    <form action="/transfer-money" method="POST">
+
+        <!-- ✅ CSRF Protection -->
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+        <label for="to_acc">Transfer To Account:</label><br>
+        <input type="text" id="to_acc" name="to_account" required><br><br>
+
+        <label for="amt">Amount:</label><br>
+        <input type="number" id="amt" name="amount" min="1" required><br><br>
+
+        <button type="submit">Execute Transfer</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Webpage</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        ul {
+            list-style-type: square;
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="toggleLanguage()">Español</button>
+
+    <h1 id="name">Hello, I'm Sakshi!</h1>
+    <p id="welcome">Welcome to my multilingual webpage.</p>
+
+    <h2 id="hobbies-title">My Hobbies:</h2>
+    <ul id="hobbies-list">
+        <li>Reading</li>
+        <li>Traveling</li>
+        <li>Coding</li>
+    </ul>
+
+    <script>
+        const content = {
+            english: {
+                button: "Español",
+                name: "Hello, I'm Sakshi!",
+                welcome: "Welcome to my multilingual webpage.",
+                hobbiesTitle: "My Hobbies:",
+                hobbies: ["Reading", "Traveling", "Coding"]
+            },
+            spanish: {
+                button: "English",
+                name: "¡Hola, soy Sakshi!",
+                welcome: "Bienvenido a mi página web multilingüe.",
+                hobbiesTitle: "Mis pasatiempos:",
+                hobbies: ["Lectura", "Viajar", "Programación"]
+            }
+        };
+
+        let currentLang = "english";
+
+        function toggleLanguage() {
+            currentLang = currentLang === "english" ? "spanish" : "english";
+            const lang = content[currentLang];
+
+            document.querySelector("button").textContent = lang.button;
+            document.getElementById("name").textContent = lang.name;
+            document.getElementById("welcome").textContent = lang.welcome;
+            document.getElementById("hobbies-title").textContent = lang.hobbiesTitle;
+
+            const hobbiesList = document.getElementById("hobbies-list");
+            hobbiesList.innerHTML = "";
+            lang.hobbies.forEach(hobby => {
+                const li = document.createElement("li");
+                li.textContent = hobby;
+                hobbiesList.appendChild(li);
+            });
+        }
+    </script>
+
+</body>
+</html>

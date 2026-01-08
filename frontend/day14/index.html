@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility in HTML</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f4f9;
+            color: #333;
+            padding: 40px;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #0077cc;
+        }
+
+        nav a:focus {
+            outline: 3px solid #ff8c00;
+        }
+
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            padding: 8px 14px;
+            background: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:focus {
+            outline: 3px solid #ff8c00;
+        }
+
+        .images {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .images img {
+            border-radius: 8px;
+            width: 200px;
+            height: auto;
+        }
+
+        article {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Task 3 & 4: Accessible Navigation -->
+    <nav role="navigation" aria-label="Main Navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <h1>Accessible Webpage Example</h1>
+
+    <!-- Task 1: Images with meaningful ALT text -->
+    <div class="images">
+        <img src="nature.jpg" alt="A scenic view of mountains and a river">
+        <img src="city.jpg" alt="Skyline of a modern city during sunset">
+        <img src="logo.png" alt=""> <!-- Decorative image -->
+    </div>
+
+    <!-- Task 2: Accessible Form -->
+    <form aria-label="Contact Form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" aria-required="true" placeholder="Enter your name">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" aria-required="true" placeholder="Enter your email">
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number">
+
+        <button type="submit" aria-label="Submit Contact Form">Submit</button>
+    </form>
+
+    <!-- Task 5: Proper heading structure -->
+    <article>
+        <h2>Our Services</h2>
+        <h3>Web Development</h3>
+        <p>We create accessible and responsive websites for all users.</p>
+    </article>
+
+    <!-- Task 6: Button accessibility -->
+    <button aria-label="Open Menu">☰ Menu</button>
+
+</body>
+</html>

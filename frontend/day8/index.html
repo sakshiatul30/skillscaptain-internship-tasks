@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multimedia in HTML</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: white;
+        text-align: center;
+        padding: 40px;
+    }
+
+    h1 {
+        color: #E5608E;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        background: rgba(255,255,255,0.08);
+        padding: 25px;
+        border-radius: 12px;
+    }
+
+    video, audio, iframe {
+        margin: 20px 0;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .gallery {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+
+    .gallery img {
+        width: 200px;
+        border-radius: 10px;
+    }
+
+    p.caption {
+        font-size: 14px;
+        color: #ccc;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Multimedia in HTML</h1>
+
+    <!-- Video 1 -->
+    <h2>Travel Video 1</h2>
+    <video controls>
+        <source src="travel1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p class="caption">A relaxing nature video.</p>
+
+    <!-- Video 2 -->
+    <h2>Travel Video 2</h2>
+    <video controls>
+        <source src="travel2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p class="caption">Exploring mountains and rivers.</p>
+
+    <!-- Audio -->
+    <h2>Background Music</h2>
+    <audio controls>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <p class="caption">Relaxing travel music.</p>
+
+    <!-- Image Gallery -->
+    <h2>Image Gallery</h2>
+    <div class="gallery">
+        <img src="pic1.jpg" alt="Scenic View">
+        <img src="pic2.jpg" alt="Beach Sunset">
+        <img src="pic3.jpg" alt="City Night">
+    </div>
+    <p class="caption">Some beautiful travel snapshots.</p>
+
+    <!-- YouTube Video -->
+    <h2>Embedded YouTube Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" 
+        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <p class="caption">A fun YouTube travel video.</p>
+</div>
+
+</body>
+</html>
