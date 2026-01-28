@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 6 – Conditional Statements</title>
+</head>
+<body>
+
+<script>
+  let membershipType = "Gold";   // Gold, Silver, Regular
+  let billAmount = 1000;
+  let discount = 0;
+
+  if (membershipType === "Gold") {
+    discount = billAmount * 0.20;
+  } else if (membershipType === "Silver") {
+    discount = billAmount * 0.10;
+  } else {
+    discount = 0;
+  }
+
+  let finalAmount = billAmount - discount;
+
+  console.log("Membership Type:", membershipType);
+  console.log("Bill Amount:", billAmount);
+  console.log("Discount:", discount);
+  console.log("Final Amount to Pay:", finalAmount);
+</script>
+
+</body>
+</html>

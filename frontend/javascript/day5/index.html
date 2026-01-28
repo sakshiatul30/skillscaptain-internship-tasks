@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tony's Café – Type Conversion</title>
+</head>
+<body>
+
+  <h2>Tony’s Café Billing System ☕</h2>
+
+  <script>
+    // ===============================
+    // STEP 1: Implicit Coercion (Bug)
+    // ===============================
+
+    let itemPrice = "200"; // String
+    let quantity = 50;     // Number
+
+    let total = itemPrice + quantity; // Implicit coercion
+    console.log("Total (Buggy):", total); // "20050"
+
+    // ===============================
+    // STEP 2: Explicit Type Conversion (Fix)
+    // ===============================
+
+    let fixedTotal = Number(itemPrice) + quantity;
+    console.log("Fixed Total:", fixedTotal); // 250
+
+    // ===============================
+    // Extra Examples
+    // ===============================
+
+    console.log("Type of itemPrice:", typeof itemPrice);
+    console.log("Type after conversion:", typeof Number(itemPrice));
+  </script>
+
+</body>
+</html>

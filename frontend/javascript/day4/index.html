@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 4 – Tony's Café Receipt</title>
+<style>
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+  h1 { color: #ffcc70; margin-bottom: 20px; text-align: center; }
+  .receipt {
+    background: #222;
+    border: 2px dashed #ffcc70;
+    border-radius: 10px;
+    width: 350px;
+    padding: 25px 20px;
+    box-shadow: 0 0 20px rgba(255,204,112,0.3);
+  }
+  .receipt-header { text-align: center; margin-bottom: 15px; }
+  .receipt-header h2 { margin: 0; font-size: 22px; color: #ffcc70; }
+  .receipt-header p { margin: 2px 0; font-size: 14px; color: #bbb; }
+  .receipt-item { display: flex; justify-content: space-between; margin: 8px 0; font-size: 18px; }
+  .total { border-top: 1px dashed #ffcc70; margin-top: 12px; padding-top: 12px; font-weight: bold; font-size: 20px; display: flex; justify-content: space-between; }
+  .bonus { font-size: 16px; margin-top: 8px; color: #ffcc70; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<h1>☕ Tony's Café Digital Receipt</h1>
+<p>Complete the tasks in the JS section to generate your receipt!</p>
+<div class="receipt" id="receipt">
+  <!-- Receipt will appear here -->
+</div>
+<script>
+  // ===============================
+  // TASK: Step 1 - Fill in order details
+  // ===============================
+  // TODO: Change these values to test different orders
+  let customerName = ""; // ❗ Task: Enter your customer name
+  let itemName = "";     // ❗ Task: Enter the item ordered (messy input like "LATTE" is okay)
+  let price = 0;         // ❗ Task: Enter the price per item
+  let quantity = 0;      // ❗ Task: Enter the quantity ordered
+
+  // ===============================
+  // TASK: Step 2 - Format item name using string methods
+  // ===============================
+  // Hint: Use charAt(), toUpperCase(), toLowerCase() or replace()
+  let formattedItem = ""; // ❗ Task: Create formattedItem based on itemName
+
+  // ===============================
+  // STEP 3: Calculate total
+  // ===============================
+  // TODO: Calculate total
+  let total = 0; // ❗ Task: price * quantity
+
+  // ===============================
+  // STEP 4: Display receipt
+  // ===============================
+  const receiptDiv = document.getElementById("receipt");
+  receiptDiv.innerHTML = `
+    <div class="receipt-header">
+      <h2>TONY'S CAFÉ</h2>
+      <p>Customer: ${customerName}</p>
+    </div>
+    <div class="receipt-item">
+      <span>${formattedItem} x ${quantity}</span>
+      <span>₹${total}</span>
+    </div>
+    <div class="total">
+      <span>Total</span>
+      <span>₹${total}</span>
+    </div>
+  `;
+
+  // ===============================
+  // BONUS: Service charge calculation
+  // ===============================
+  // ❗ Task: Calculate finalAmount including 10% service charge
+  let serviceCharge = 0.10;
+  let finalAmount = 0; // TODO: total + total*serviceCharge
+
+  receiptDiv.innerHTML += `
+    <div class="bonus">
+      <span>Service Charge (10%)</span>
+      <span>₹${(total * serviceCharge).toFixed(2)}</span>
+    </div>
+    <div class="total">
+      <span>Final Amount</span>
+      <span>₹${finalAmount.toFixed(2)}</span>
+    </div>
+    <p style="text-align:center; margin-top:12px;">Thank you, ${customerName}! Enjoy your coffee! ☕</p>
+  `;
+</script>
+</body>
+</html>
