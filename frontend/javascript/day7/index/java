@@ -1,0 +1,72 @@
+// Vehicle Rental System using Inheritance
+
+class Vehicle {
+    protected String brand;
+    protected String model;
+    protected int year;
+    protected double rentalPrice;
+
+    // Constructor
+    public Vehicle(String brand, String model, int year, double rentalPrice) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.rentalPrice = rentalPrice;
+    }
+
+    // Method to display vehicle information
+    public void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Year: " + year);
+        System.out.println("Rental Price per day: ₹" + rentalPrice);
+    }
+}
+
+// Car class
+class Car extends Vehicle {
+    private int numberOfSeats;
+
+    public Car(String brand, String model, int year, double rentalPrice, int numberOfSeats) {
+        super(brand, model, year, rentalPrice);
+        this.numberOfSeats = numberOfSeats;
+    }
+
+    public int getNumberOfSeats() {
+        return numberOfSeats;
+    }
+}
+
+// Motorcycle class
+class Motorcycle extends Vehicle {
+    private int engineCapacity;
+
+    public Motorcycle(String brand, String model, int year, double rentalPrice, int engineCapacity) {
+        super(brand, model, year, rentalPrice);
+        this.engineCapacity = engineCapacity;
+    }
+
+    public int getEngineCapacity() {
+        return engineCapacity;
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+
+        // Create Car object
+        Car car = new Car("Toyota", "Innova", 2022, 3000, 7);
+        System.out.println("Car Details:");
+        car.displayInfo();
+        System.out.println("Number of Seats: " + car.getNumberOfSeats());
+
+        System.out.println("--------------------------------");
+
+        // Create Motorcycle object
+        Motorcycle bike = new Motorcycle("Royal Enfield", "Classic 350", 2021, 1500, 350);
+        System.out.println("Motorcycle Details:");
+        bike.displayInfo();
+        System.out.println("Engine Capacity: " + bike.getEngineCapacity() + " cc");
+    }
+}
